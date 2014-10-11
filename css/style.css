@@ -1,0 +1,128 @@
+#wrapper {
+	margin: 0 auto;
+}
+
+* {
+	font-family: "Nunito", sans-serif;
+	outline: 1px solid red;
+}
+
+#logo {
+	display: inline-block;
+	height: 51px;
+	width: 144px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	background-image: url(../images/newamlinlogo.png);
+	background-repeat: no-repeat;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	background-color: #4c4c45;
+	color: white;
+	z-index: 100;
+}
+
+.headFont {
+	display: inline-block;
+	font-size: 28px;
+	margin: 21px;
+}
+
+.right {
+	float: right;
+	top: 0;
+	right: 0;
+}
+
+#header ul {
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: 0;
+}
+
+#questionAnswer {
+	margin: 0 auto;
+	width: 800px;
+}
+
+#Spacer {
+	display: block;
+	position: relative;
+	height: 25px;
+	margin-top: 80px;
+}
+
+#footer {
+	display: block;
+	position: relative;
+	height: 80px;
+	margin-top: 80px;
+	background-color: #4c4c45;
+	color: white;
+	z-index: 100;
+	text-align: center;
+}
+
+#footerScore {
+	display: inline-block;
+	padding-top: 10px;
+}
+
+#pressNew {
+	height: 400px;
+	border: 10px solid #482DFF;
+	font-family: "Francois One", sans-serif;
+	font-size: 72px;
+	text-align: center;
+	color: #4c4c45;
+}
+
+#question1 {
+	height: 400px;
+	border: 10px solid #FF075C;
+}
+
+#question2 {
+	height: 400px;
+	border: 10px solid #B41DE8;
+}
+
+#question3 {
+	height: 400px;
+	border: 10px solid #482DFF;
+}
+
+#question4 {
+	height: 400px;
+	border: 10px solid #2881E8;
+}
+
+#question5 {
+	height: 400px;
+	border: 10px solid #20FFF2;
+}
+.ques {
+	padding-left: 15px;
+	font-family: "Francois One", sans-serif;
+	font-size: 36px;
+}
+
+.ans {
+	line-height: 40px;
+}
+
+.vertical { 
+	position: relative;
+  	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%); 
+}
