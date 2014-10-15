@@ -7,12 +7,12 @@
 		<meta charset="utf-8"/>
 		
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href="styles/reset.css">
+		<!-- <link rel="stylesheet" href="styles/reset.css"> -->
 		<link href='http://fonts.googleapis.com/css?family=Francois+One|Nunito' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/> 
 
 		<!-- JavaScript -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
@@ -21,71 +21,82 @@
 		<div id="logo"></div>
 		<h1 class="headFont">Underwriting Quiz</h1>
 		<ul>
-			<li class="headFont right">+New</li>
+			<li id="startButton" class="headFont right">+New</li>
 		</ul>
 	</div>
 
 	<div id="Spacer"></div>
 	<div id="questionAnswer">
-		<div id="pressNew">
+		<div id="startScreen">
 			<p>Press +New to start a new game!</p>
 		</div>
 
-		<div id="question1">
+		<div id="q1">
 			<p class="ques">Which is not a reason for using catastrophe models?</p>
 			<ol class="ans">
 				<li>Models help us with risk selection and benchmarking</li>
 				<li>Models help us satisfy regulatory and investor requirements</li>
-				<li>Models are a relatively affordable tools</li>
+				<li class="win">Models are a relatively affordable tools</li>
 				<li>Models simulate the expected losses of an account</li>
 			</ol>
+			<div class="correct">Correct</div>
+			<div class="incorrect">Incorrect</div>			
 		</div>	
 
-		<div id="question2">
+		<div id="q2">
 			<p class="ques">How much direct gross net premium do we expect to write this year?</p>
 			<ol class="ans">
 				<li>USD 150 million</li>
 				<li>USD 225 million</li>
 				<li>USD 400 million</li>
-				<li>USD 465 million</li>
+				<li class="win">USD 465 million</li>
 			</ol>
+			<div class="correct">Correct</div>
+			<div class="incorrect">Incorrect</div>		
 		</div>		
 
-		<div id="question3">
+		<div id="q3">
 			<p class="ques">Since inception, how much claims have we incurred in our Bermuda unit?</p>
 			<ol class="ans">
 				<li>USD 50 million</li>
 				<li>USD 100 million</li>
 				<li>USD 400 million</li>
-				<li>USD 850 million</li>
+				<li class="win">USD 850 million</li>
 			</ol>
+			<div class="correct">Correct</div>
+			<div class="incorrect">Incorrect</div>		
 		</div>		
 
-		<div id="question4">
+		<div id="q4">
 			<p class="ques">When did Amlin's Bermuda unit begin operating?</p>
 			<ol class="ans">
 				<li>September 1, 2004</li>
-				<li>December 1, 2005</li>
+				<li class="win">December 1, 2005</li>
 				<li>January 1, 2006</li>
 				<li>June 1, 2006</li>
-				<li>July 1, 2006</li>
 			</ol>
+			<div class="correct">Correct</div>
+			<div class="incorrect">Incorrect</div>		
 		</div>		
 
-		<div id="question5">
+		<div id="q5">
 			<p class="ques">How do we expect market rates to shift in 2015?</p>
 			<ol class="ans">
 				<li>Up 10%</li>
 				<li>Up 5%</li>
-				<li>Flat</li>
-				<li>Down 5%</li>
+				<li class="win">Down 5%</li>
 				<li>Down 10%</li>
 			</ol>
-		</div>		
+			<div class="correct">Correct</div>
+			<div class="incorrect">Incorrect</div>		
+		</div>	
+		<div id="endScreen">
+			<p>Final score: 0 out of 5. Thank you for playing!</p>
+		</div>	
 	</div>
 	<div id="footer">
 		<div id="footerScore">
-			<p>Score: 0 out of 5</p>
+<!-- 			<p>Score: 0 out of 5</p> -->
 		</div>
 	</div>
 

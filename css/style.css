@@ -4,7 +4,7 @@
 
 * {
 	font-family: "Nunito", sans-serif;
-	outline: 1px solid red;
+/*	outline: 1px solid red;*/
 }
 
 #logo {
@@ -61,10 +61,11 @@
 }
 
 #footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	display: block;
-	position: relative;
-	height: 80px;
-	margin-top: 80px;
 	background-color: #4c4c45;
 	color: white;
 	z-index: 100;
@@ -76,43 +77,57 @@
 	padding-top: 10px;
 }
 
-#pressNew {
+#startScreen, #endScreen {
 	height: 400px;
+	padding-top: 40px;
 	border: 10px solid #482DFF;
 	font-family: "Francois One", sans-serif;
 	font-size: 72px;
 	text-align: center;
 	color: #4c4c45;
+	background-color: white;
 }
 
-#question1 {
+#endScreen, .correct, .incorrect {
+	display: none;
+}
+
+#q1, #q2, #q3, #q4, #q5 {
 	height: 400px;
+	background-color: white;
+}
+
+#q1 {
 	border: 10px solid #FF075C;
+	display: none;
 }
 
-#question2 {
-	height: 400px;
+#q2 {
 	border: 10px solid #B41DE8;
+	display: none;
 }
 
-#question3 {
-	height: 400px;
+#q3 {
 	border: 10px solid #482DFF;
+	display: none;
 }
 
-#question4 {
-	height: 400px;
+#q4 {
 	border: 10px solid #2881E8;
+	display: none;
 }
 
-#question5 {
-	height: 400px;
+#q5 {
 	border: 10px solid #20FFF2;
+	display: none;
 }
+
 .ques {
 	padding-left: 15px;
 	font-family: "Francois One", sans-serif;
 	font-size: 36px;
+	margin-bottom: 18px;
+	border-bottom: 1px solid #EDEDEB;
 }
 
 .ans {
@@ -125,4 +140,25 @@
   	-webkit-transform: translateY(-50%);
   	-ms-transform: translateY(-50%);
   	transform: translateY(-50%); 
+}
+
+#questionAnswer li:hover {
+	background-color: #D9D5D5;
+}
+
+.correct {
+	padding-left: 10px;
+	background-color: #70E482;
+	border: 1px dashed #1DA531;
+}
+
+.incorrect {
+	padding-left: 10px;
+	background-color: #EB5C5C;
+	border: 1px dashed #D00D0D;
+	color: white;
+}
+
+body {
+	background-color: #E9E9E0;
 }
