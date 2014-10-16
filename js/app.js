@@ -7,10 +7,10 @@ $(document).ready(function() {
 	// Starts a new game from scratch
   	newGame();
 
-	quizQuestion(1);
+	quizQuestion();
 
 
-  	function newGame() {
+  	function newGame() {  		
 	  	$("#startButton").on("mouseup", function() {
 	  		// If startScreen is visible, proceed to Q#1
 	  		if ( $("#startScreen").is(':visible') ) {
@@ -31,33 +31,38 @@ $(document).ready(function() {
 	  	});
   	};
 
-  	function quizQuestion(j) {
+  	function quizQuestion() {
 
-		$("#questionAnswer li").on("mouseup", function() {
-			if ($(this).hasClass("win")) {
-				$(".correct").show();
-				// updateScore();
-				$(".correct").fadeOut(2000, function() {
-				$("#q"+j).hide();
-				$("#q"+(j+1)).show();
-				});  			
-			} else {
-				$(".incorrect").show();
-				$(".incorrect").fadeOut(2000, function() {
-				$("#q"+j).hide();
-				$("#q"+(j+1)).show();	
-				});
-			}
+		$("#questionAnswer li").each(function(index, element){
+			var $element = $(element);
+			var $parent = $element.parent().parent();
+			var $next = $("#q" + (parseInt($parent[0].id.split("q")[1])+1));
+
+			$element.on("click", function() {
+				if ($(this).hasClass("win")) {
+					$(".correct").show();
+					updateScore();
+					$(".correct").fadeOut(2000, function() {
+						$parent.hide();
+						$next.show();
+					});  			
+				} else {
+					$(".incorrect").show();
+					$(".incorrect").fadeOut(2000, function() {
+						$parent.hide();
+						$next.show();
+					});
+				}
+	  		})
+		});
 		
-		return quizQuestion(j+1);
-
-  		})
   	};
 
 	/* Function to update score in the footerScore element*/
-	// function updateScore() {
-	// 	correctCount++;
-	// 	$("#footerScore p").remove();
-	// 	$("#footerScore").append("<p>Score: " + correctCount + " out of 5</p>");
-	// }
+	function updateScore() {
+		correctCount++;
+		$("#footerScore p").remove();
+		$("#footerScore").append("<p>Score: " + correctCount + " out of 5</p>");
+	}
+
 });

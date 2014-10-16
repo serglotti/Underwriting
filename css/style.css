@@ -77,7 +77,7 @@
 	padding-top: 10px;
 }
 
-#startScreen, #endScreen {
+#startScreen, #q6 {
 	height: 400px;
 	padding-top: 40px;
 	border: 10px solid #482DFF;
@@ -88,11 +88,11 @@
 	background-color: white;
 }
 
-#endScreen, .correct, .incorrect {
+.correct, .incorrect {
 	display: none;
 }
 
-#q1, #q2, #q3, #q4, #q5 {
+#q1, #q2, #q3, #q4, #q5, #q6 {
 	height: 400px;
 	background-color: white;
 }
@@ -119,6 +119,11 @@
 
 #q5 {
 	border: 10px solid #20FFF2;
+	display: none;
+}
+
+#q6 {
+	border: 10px solid #FF075C;
 	display: none;
 }
 
